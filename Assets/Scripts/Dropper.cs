@@ -7,15 +7,15 @@ public class Dropper : MonoBehaviour
     [SerializeField] float secondsBeforeFall = 3;
 
     MeshRenderer meshRenderer;
-    Rigidbody rigidbody;
+    Rigidbody rigidBody;
 
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        rigidbody = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody>();
 
         meshRenderer.enabled = false;
-        rigidbody.useGravity = false;
+        rigidBody.useGravity = false;
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class Dropper : MonoBehaviour
         if (Time.time > secondsBeforeFall)
         {
             meshRenderer.enabled = true;
-            rigidbody.useGravity = true;
+            rigidBody.useGravity = true;
         }
             
     }
