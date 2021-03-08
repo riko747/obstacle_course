@@ -12,7 +12,7 @@ public class Scorer : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag != "Hit" && collision.gameObject.tag != "Ground")
         {
             bumped++;
             print("You're bumped " + bumped + " times");
